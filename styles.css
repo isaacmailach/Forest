@@ -1,0 +1,49 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+#loading {
+  background-color: black;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+#loading-box {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#loading-credit {
+  bottom: 10px;
+  position: absolute;
+  right: 10px;
+  transform-origin: right bottom;
+}
+#loading-loading {
+  animation: fade-in-out 0.8s infinite alternate ease;
+  display: block;
+}
+#loading-title {
+  display: block;
+  margin-bottom: 120px;
+}
+
+@keyframes fade-in-out {
+  from { opacity: 1; }
+  to { opacity: 0.6; }
+}
+
+img {
+  transform: scale(3);
+
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+}
